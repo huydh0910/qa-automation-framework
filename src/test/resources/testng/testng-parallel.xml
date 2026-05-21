@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    Parallel execution across test methods within each <test> block.
+    ThreadLocal in DriverManager and TokenManager keeps each thread isolated.
+-->
+<suite name="Parallel Suite" parallel="methods" thread-count="4" verbose="1">
+
+    <test name="Web Tests - Parallel">
+        <classes>
+            <class name="com.automation.web.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="API Tests - Parallel">
+        <classes>
+            <class name="com.automation.api.LoginApiTest"/>
+            <class name="com.automation.api.GetUserApiTest"/>
+            <class name="com.automation.api.UpdateUserApiTest"/>
+        </classes>
+    </test>
+
+</suite>

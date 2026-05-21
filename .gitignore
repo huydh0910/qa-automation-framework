@@ -1,0 +1,17 @@
+target/
+*.class
+*.jar
+*.war
+*.ear
+.idea/
+*.iml
+.eclipse/
+.settings/
+.project
+.classpath
+reports/
+screenshots/
+*.log
+.DS_Store
+Thumbs.db
+browserstack-results/
